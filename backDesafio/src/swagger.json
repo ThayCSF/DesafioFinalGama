@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.0",
+
+  "info": {
+    "title": "API projeto final Gama",
+    "description": "Essa é a API do meu projeto para a Gama Academy.",
+    "version": "0.0.1"
+  },
+
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "ambiente de desenvolvimento"
+    }
+  ],
+
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Cadastro de candidato",
+        "description": "Rota de cadastro de usuário, recebe: id, nome, cargo, dataNascimento, estadoCivil, gênero, endereço, telefone, email, RG, CPF, possuiVeiculo e habilitaçãoTipo",
+        "tags": ["candidato"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "nome": {
+                  "type": "string"
+                  },
+                  "cargo": {
+                    "type": "string"
+                  },
+                  "dataNascimento": {
+                    "type": "string"
+                  },
+                  "estadoCivil": {
+                    "type": "string"
+                  },
+                  "genero": {
+                    "type": "string"
+                  },
+                  "cep": {
+                    "type": "string"
+                  },
+                  "logradouro": {
+                    "type": "string"
+                  },
+                  "numero": {
+                    "type": "string"
+                  },
+                  "bairro": {
+                    "type": "string"
+                  },
+                  "localidade": {
+                    "type": "string"
+                  },
+                  "uf": {
+                    "type": "string"
+                  },
+                  "telefone": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "rg": {
+                    "type": "string"
+                  },
+                  "cpf": {
+                    "type": "string"
+                  },
+                  "possuiVeiculo": {
+                    "type": "string"
+                  },
+                  "habilitacaoTipo": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "Meu user teste": {
+                  "value": {                                    
+                    "nome": "Thayná Cristina",
+                    "cargo": "Dev full stack Jr",
+                    "dataNascimento": "00/00/0000",
+                    "estadoCivil": "solteira",
+                    "genero": "feminino cis",
+                    "cep": "00000-000",
+                    "logradouro": "rua",
+                    "numero": "600",
+                    "bairro": "zé gotinha",
+                    "localidade": "Belo Horizonte",
+                    "uf": "MG",
+                    "telefone": "123123456",
+                    "email": "teste@teste.com",
+                    "rg": "12345678",
+                    "cpf": "12365478932",
+                    "possuiVeiculo": "sim", 
+                    "habilitacaoTipo": "b"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
